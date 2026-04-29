@@ -1,10 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Priscila Mantovani | Nutrição e Longevidade</title>
+    
     <!-- Google Fonts: Exo 2 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,9 +17,8 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#a65d79',
+                        primary: '#a65d79', /*ECDFCF*/
                         accent: '#45818e',
-                        dark: '#2d3436',
                         offwhite: '#fdf8fa',
                     },
                     fontFamily: {
@@ -32,10 +31,15 @@
 
     <style>
         /* Estilos Customizados e Ajustes Finos */
+        :root {
+            --cor-principal: #a65d79;
+            --cor-fundo: #a65d79;
+        }
+
         body {
             font-family: 'Exo 2', sans-serif;
-            background-color: #a65d79; /* Fundo principal solicitado */
-            color: #ffffff;
+            background-color: var(--cor-fundo); 
+            color: var(--cor-principal);
             scroll-behavior: smooth;
             -webkit-font-smoothing: antialiased;
         }
@@ -45,12 +49,31 @@
             text-transform: none !important;
         }
 
-        /* Seção Hero com Imagem de Fundo */
+        /* Seção Hero */
         .hero-bg {
-            background: linear-gradient(rgba(166, 93, 121, 0.85), rgba(166, 93, 121, 0.9)), 
-                        url('https://images.unsplash.com/photo-1490818387583-1baba5e638af?auto=format&fit=crop&q=80&w=1920');
-            background-size: cover;
-            background-position: center;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            background-color: #000000 !important; 
+        }
+
+        /* Camada da Imagem */
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url('https://i.postimg.cc/0294S82F/Foto-de-Priscila.jpg');
+            background-repeat: no-repeat;
+            background-position: right 0px top 10px;
+            opacity: 25%; 
+            z-index: 1;
+        }
+
+        /* Garante que o texto e botões fiquem acima do preto */
+        .hero-bg > * {
+            position: relative;
+            z-index: 2;
         }
 
         /* Sombra suave nos cards */
@@ -137,80 +160,81 @@
             outline: none;
             box-shadow: 0 0 0 3px rgba(69, 129, 142, 0.2);
         }
+
+        /* Classe específica para o menu */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@0,400;1,700&display=swap');
+        .fonte-menu {
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 1.5px;
+        }
+
     </style>
 </head>
+
 <body class="antialiased">
 
     <!-- Header -->
-    <header class="fixed top-0 w-full z-50 bg-primary/95 backdrop-blur-md border-b border-white/10 h-20">
-        <div class="container mx-auto px-4 h-full flex items-center justify-between">
-            <!-- Botão Menu (Lado Esquerdo) -->
-            <button id="btn-open-menu" class="p-2 text-white hover:text-accent transition" aria-label="Abrir Menu">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16" />
-                </svg>
-            </button>
+    <header class="hidden md:block fixed top-0 w-full z-50 bg-black/70 h-8">
+        <div class="container mx-auto px-4 h-full flex items-center justify-center">
+            
+            <nav class="flex items-center gap-8">
+                <a href="#inicio" class="text-white hover:text-accent transition font-medium">Início</a>
+                <a href="#servicos" class="text-white hover:text-accent transition font-medium">Serviços</a>
+                <a href="#diferenciais" class="text-white hover:text-accent transition font-medium">Diferenciais</a>
+                <a href="#contato" class="text-white hover:text-accent transition font-medium">Contato</a>
+            </nav>
 
-            <!-- Logo (Centro) -->
-            <div class="text-2xl font-bold tracking-tight">
-                Priscila Mantovani
-            </div>
-
-            <!-- Botão WhatsApp (Desktop - Lado Direito) -->
-            <div class="hidden md:block">
-                <a href="https://wa.me/5500000000000" class="bg-accent hover:brightness-110 text-white px-6 py-2 rounded-full font-medium transition flex items-center gap-2">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-                    WhatsApp
-                </a>
-            </div>
         </div>
     </header>
 
-    <!-- Menu Mobile Overlay -->
-    <div id="menu-mobile" class="fixed inset-0 z-[60] menu-overlay translate-x-[-100%] flex flex-col items-center justify-center space-y-8 text-2xl font-medium">
-        <button id="btn-close-menu" class="absolute top-6 left-6 p-2 text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-        </button>
-        <a href="#inicio" class="nav-link text-white hover:text-accent transition">Início</a>
-        <a href="#servicos" class="nav-link text-white hover:text-accent transition">Serviços</a>
-        <a href="#diferenciais" class="nav-link text-white hover:text-accent transition">Diferenciais</a>
-        <a href="#contato" class="nav-link text-white hover:text-accent transition">Contato</a>
-        <a href="https://wa.me/5500000000000" class="bg-accent text-white px-8 py-3 rounded-full">Agendar Consulta</a>
-    </div>
-
     <!-- Hero Section -->
-    <section id="inicio" class="hero-bg min-h-[90vh] flex items-center pt-20">
-        <div class="container mx-auto px-4">
-            <div class="max-w-3xl reveal active">
-                <span class="inline-block bg-white/20 backdrop-blur-md border border-white/30 text-white px-5 py-2 rounded-full text-sm font-semibold mb-8">
-                    Cuidado integral para a maturidade
-                </span>
-                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                    Nutrição e Longevidade
-                </h1>
-                <p class="text-xl md:text-2xl opacity-95 mb-12 max-w-2xl leading-relaxed">
-                    A nutrição unida ao poder da Fitoterapia e Florais de Bach para você viver sua melhor fase com vitalidade e independência.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-5">
-                    <a href="#contato" class="bg-accent hover:brightness-110 text-white px-10 py-5 rounded-2xl font-bold text-lg text-center transition-all shadow-lg hover:scale-105">
+    <section id="inicio" class="hero-bg min-h-[100vh]">
+            <div class="container px-4">
+                <img src="https://i.postimg.cc/kgP6m5sN/logo-transparente.png" 
+                    alt="Logo Priscila Mantovani" 
+                    class="w-48 md:w-64 mb-10 ">
+
+                <div class="max-w-5xl">                    
+                    <h1 class="text-4xl font-bold mb-10 leading-tight">
+                        Viva a Maturidade com Vigor e Autonomia
+                    </h1>                    
+                    <p class="text-2xl mb-10 ">
+                        Nutrição especializada para quem deseja energia, força muscular e clareza mental.
+                    </p>
+                    <p class="text-xl mb-20">
+                        Um cuidado integral que une a ciência da Nutrição ao suporte das Práticas Integrativas e do uso milenar das plantas medicinais.
+                    </p>                    
+                </div>
+
+                <div class="flex flex-col sm:flex-row">
+                    <a href="#contato" class="bg-accent hover:brightness-110 text-white px-5 py-5 rounded-full font-bold text-lg text-center transition-all shadow-lg hover:scale-105">
                         Agende Sua 1ª Sessão Grátis
                     </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
     <!-- Services Section -->
     <section id="servicos" class="py-24 bg-white text-primary">
         <div class="container mx-auto px-4">
             <div class="text-center mb-20 reveal">
                 <h2 class="text-4xl md:text-5xl font-bold mb-6">Como Posso Ajudar?</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto italic">
+
+
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto italic">
                     Abordagem nutricional humana e personalizada para os desafios naturais do envelhecimento
                 </p>
+
+                
+                <span class="inline-block bg-black backdrop-blur-md border border-white/30 text-white px-5 py-2 rounded-full text-sm font-semibold mb-8">
+                    Cuidado integral para a maturidade
+                </span>
+
+
             </div>
+
+
+
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Card 1 -->
@@ -480,27 +504,6 @@
 
     <!-- Scripts embutidos -->
     <script>
-        // Lógica do Menu Mobile
-        const btnOpen = document.getElementById('btn-open-menu');
-        const btnClose = document.getElementById('btn-close-menu');
-        const menuOverlay = document.getElementById('menu-mobile');
-        const navLinks = document.querySelectorAll('.nav-link');
-
-        function toggleMenu() {
-            const isOpen = menuOverlay.style.transform === 'translateX(0px)';
-            if (isOpen) {
-                menuOverlay.style.transform = 'translateX(-100%)';
-                document.body.style.overflow = '';
-            } else {
-                menuOverlay.style.transform = 'translateX(0px)';
-                document.body.style.overflow = 'hidden';
-            }
-        }
-
-        btnOpen.addEventListener('click', toggleMenu);
-        btnClose.addEventListener('click', toggleMenu);
-        navLinks.forEach(link => link.addEventListener('click', toggleMenu));
-
         // Lógica do Carrossel de Depoimentos
         const slider = document.getElementById('testimonial-slider');
         const dots = document.querySelectorAll('.slider-dot');
