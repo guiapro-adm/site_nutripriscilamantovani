@@ -76,24 +76,6 @@
             z-index: 2;
         }
 
-        /* Sombra suave nos cards */
-        .custom-card {
-            background-color: #fdf8fa;
-            color: #a65d79;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
-        }
-        .custom-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
-        }
-
-        /* Menu Mobile Overlay */
-        .menu-overlay {
-            background-color: #a65d79;
-            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
         /* Lista Numerada Customizada */
         .included-list li {
             position: relative;
@@ -189,10 +171,10 @@
 
     <!-- Hero Section -->
     <section id="inicio" class="hero-bg min-h-[100vh]">
-            <div class="container px-4">
+            <div class="container px-8">
                 <img src="https://i.postimg.cc/kgP6m5sN/logo-transparente.png" 
                     alt="Logo Priscila Mantovani" 
-                    class="w-48 md:w-64 mb-10 ">
+                    class="w-48 md:w-64 mb-10">
 
                 <div class="max-w-5xl">                    
                     <h1 class="text-4xl font-bold mb-10 leading-tight">
@@ -201,93 +183,62 @@
                     <p class="text-2xl mb-10 ">
                         Nutrição especializada para quem deseja energia, força muscular e clareza mental.
                     </p>
-                    <p class="text-xl mb-20">
+                    <p class="text-xl mb-10">
                         Um cuidado integral que une a ciência da Nutrição ao suporte das Práticas Integrativas e do uso milenar das plantas medicinais.
-                    </p>                    
+                    </p>    
+                    <p class="text-xl mb-10">
+                        Abordagem nutricional humana e personalizada para os desafios naturais do envelhecimento
+                    </p>
+                    
                 </div>
 
                 <div class="flex flex-col sm:flex-row">
                     <a href="#contato" class="bg-accent hover:brightness-110 text-white px-5 py-5 rounded-full font-bold text-lg text-center transition-all shadow-lg hover:scale-105">
-                        Agende Sua 1ª Sessão Grátis
+                        Agende Sua 1ª Sessão
                     </a>
                 </div>
             </div>
         </section>
 
     <!-- Services Section -->
-    <section id="servicos" class="py-24 bg-white text-primary">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-20 reveal">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6">Como Posso Ajudar?</h2>
-
-
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto italic">
-                    Abordagem nutricional humana e personalizada para os desafios naturais do envelhecimento
-                </p>
-
-                
-                <span class="inline-block bg-black backdrop-blur-md border border-white/30 text-white px-5 py-2 rounded-full text-sm font-semibold mb-8">
-                    Cuidado integral para a maturidade
-                </span>
-
-
-            </div>
-
-
-
-
+    <section id="servicos" class="py-4 bg-white text-primary">
+        <div class="container mx-auto px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Card 1 -->
-                <div class="custom-card p-10 rounded-3xl reveal">
-                    <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-8">
-                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Ganho de Peso e Massa Muscular</h3>
-                    <p class="text-gray-600 leading-relaxed text-lg">Estratégias para combater a perda de peso não intencional e a perda de massa muscular (sarcopenia)</p>
+                <div class="p-8 rounded-3xl reveal bg-[#1E5776]">           
+                    <h3 class="text-white text-2xl font-bold mb-6">Ganho de Peso e Massa Muscular</h3>
+                    <p class="text-white leading-relaxed text-lg">Estratégias para combater a perda de peso não intencional e a perda de massa muscular (sarcopenia)</p>
                 </div>
                 <!-- Card 2 -->
-                <div class="custom-card p-10 rounded-3xl reveal" style="transition-delay: 100ms">
-                    <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-8">
-                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Equilíbrio de Doenças Crônicas</h3>
-                    <p class="text-gray-600 leading-relaxed text-lg">Manejo nutricional para diabetes, hipertensão e colesterol, obesidade, entre outras</p>
+                <div class="p-8 rounded-3xl reveal bg-[#EE873D]" style="transition-delay: 100ms">
+                    <h3 class="text-white text-2xl font-bold mb-6">Equilíbrio de Doenças Crônicas</h3>
+                    <p class="text-white leading-relaxed text-lg">Manejo nutricional para diabetes, hipertensão e colesterol, obesidade, entre outras</p>
                 </div>
                 <!-- Card 3 -->
-                <div class="custom-card p-10 rounded-3xl reveal" style="transition-delay: 200ms">
-                    <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-8">
-                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Disposição e Vitalidade</h3>
-                    <p class="text-gray-600 leading-relaxed text-lg">Resgate da energia para as atividades diárias por meio de nutrientes específicos e regulação metabólica</p>
+                <div class="p-8 rounded-3xl reveal bg-[#1E5776]" style="transition-delay: 200ms">
+                    <h3 class="text-white text-2xl font-bold mb-6">Disposição e Vitalidade</h3>
+                    <p class="text-white leading-relaxed text-lg">Resgate da energia para as atividades diárias por meio de nutrientes específicos e regulação metabólica</p>
                 </div>
                 <!-- Card 4 -->
-                <div class="custom-card p-10 rounded-3xl reveal">
-                    <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-8">
-                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Falta de Fome</h3>
-                    <p class="text-gray-600 leading-relaxed text-lg">Estímulo do apetite e densidade nutricional para garantir que cada refeição supra as necessidades do seu corpo</p>
+                <div class="p-8 rounded-3xl reveal bg-[#EE873D]" style="transition-delay: 300ms">
+                    <h3 class="text-white text-2xl font-bold mb-6">Falta de Fome</h3>
+                    <p class="text-white leading-relaxed text-lg">Estímulo do apetite e densidade nutricional para garantir que cada refeição supra as necessidades do seu corpo</p>
                 </div>
                 <!-- Card 5 -->
-                <div class="custom-card p-10 rounded-3xl reveal" style="transition-delay: 100ms">
-                    <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-8">
-                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12z"/></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Mastigação e Deglutição</h3>
-                    <p class="text-gray-600 leading-relaxed text-lg">Ajustes de texturas e consistências para garantir uma alimentação segura, prazerosa e livre de riscos</p>
+                <div class="p-8 rounded-3xl reveal bg-[#1E5776]" style="transition-delay: 400ms">
+                    <h3 class="text-white text-2xl font-bold mb-6">Mastigação e Deglutição</h3>
+                    <p class="text-white leading-relaxed text-lg">Ajustes de texturas e consistências para garantir uma alimentação segura, prazerosa e livre de riscos</p>
                 </div>
                 <!-- Card 6 -->
-                <div class="custom-card p-10 rounded-3xl reveal" style="transition-delay: 200ms">
-                    <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-8">
-                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547"/></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Suplementação</h3>
-                    <p class="text-gray-600 leading-relaxed text-lg">Prescrição assertiva de vitaminas e minerais baseada em exames para suprir carências comuns no envelhecimento</p>
+                <div class="p-8 rounded-3xl reveal bg-[#EE873D] " style="transition-delay: 500ms">
+                    <h3 class="text-white text-2xl font-bold mb-6">Suplementação</h3>
+                    <p class="text-white leading-relaxed text-lg">Prescrição assertiva de vitaminas e minerais baseada em exames para suprir carências comuns no envelhecimento</p>
                 </div>
             </div>
-
-            <!-- What's Included -->
+    </section>
+  
+    <!-- What's Included -->
+    <section id="incluso" class="py-4 bg-white text-primary">
             <div class="mt-32 max-w-5xl mx-auto bg-offwhite p-10 md:p-20 rounded-[3rem] shadow-xl reveal">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold mb-4">O que está incluso?</h2>
@@ -306,11 +257,10 @@
                     <li data-number="10">Retorno Final</li>
                 </ul>
             </div>
-        </div>
     </section>
 
     <!-- Differentials Section -->
-    <section id="diferenciais" class="py-24 bg-primary text-white">
+    <section id="diferenciais" class="py-4 bg-white text-primary">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl md:text-5xl font-bold text-center mb-24 max-w-4xl mx-auto reveal">
                 Integração de saberes para um cuidado mais profundo e natural.
