@@ -5,24 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Priscila Mantovani | Nutrição e Longevidade</title>
     
-    <!-- Google Fonts: Exo 2 -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS CDN -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">    
+  
+<!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#a65d79', /*ECDFCF*/
-                        accent: '#45818e',
+                        primary: '#04365F',
+                        accent: '#B46647',
                         offwhite: '#fdf8fa',
                     },
                     fontFamily: {
-                        sans: ['"Exo 2"', 'sans-serif'],
+                        sans: ['"Lato",', 'sans-serif'],
                     }
                 }
             }
@@ -32,14 +32,14 @@
     <style>
         /* Estilos Customizados e Ajustes Finos */
         :root {
-            --cor-principal: #a65d79;
-            --cor-fundo: #a65d79;
+            --cor-1: #04365F;
+            --cor-2: #B46647;
         }
 
         body {
-            font-family: 'Exo 2', sans-serif;
+            font-family: 'Lato', sans-serif;
             background-color: var(--cor-fundo); 
-            color: var(--cor-principal);
+            color: var(--cor-1);
             scroll-behavior: smooth;
             -webkit-font-smoothing: antialiased;
         }
@@ -55,7 +55,7 @@
             overflow: hidden;
             display: flex;
             align-items: center;
-            background-color: #000000 !important; 
+            background-color: #ffffff !important; 
         }
 
         /* Camada da Imagem */
@@ -63,10 +63,10 @@
             content: '';
             position: absolute;
             inset: 0;
-            background-image: url('https://i.postimg.cc/0294S82F/Foto-de-Priscila.jpg');
+            background-image: url('https://i.postimg.cc/s2d5pTPY/foto-pri-transparente.png');
             background-repeat: no-repeat;
-            background-position: right 0px top 10px;
-            opacity: 25%; 
+            background-position: right 0px top 20px;
+            opacity: 75%; 
             z-index: 1;
         }
 
@@ -142,21 +142,13 @@
             outline: none;
             box-shadow: 0 0 0 3px rgba(69, 129, 142, 0.2);
         }
-
-        /* Classe específica para o menu */
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@0,400;1,700&display=swap');
-        .fonte-menu {
-            font-family: 'Montserrat', sans-serif;
-            letter-spacing: 1.5px;
-        }
-
     </style>
 </head>
 
 <body class="antialiased">
 
     <!-- Header -->
-    <header class="hidden md:block fixed top-0 w-full z-50 bg-black/70 h-8">
+    <header class="hidden md:block fixed top-0 w-full z-50 bg-accent/70 h-8">
         <div class="container mx-auto px-4 h-full flex items-center justify-center">
             
             <nav class="flex items-center gap-8">
@@ -172,9 +164,9 @@
     <!-- Hero Section -->
     <section id="inicio" class="hero-bg min-h-[100vh]">
             <div class="container px-8">
-                <img src="https://i.postimg.cc/kgP6m5sN/logo-transparente.png" 
+                <img src="https://i.postimg.cc/xdF8vRzq/logo2.png" 
                     alt="Logo Priscila Mantovani" 
-                    class="w-48 md:w-64 mb-10">
+                    class="w-48 md:w-96 mb-10">
 
                 <div class="max-w-5xl">                    
                     <h1 class="text-4xl font-bold mb-10 leading-tight">
@@ -205,32 +197,32 @@
         <div class="container mx-auto px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Card 1 -->
-                <div class="p-8 rounded-3xl reveal bg-[#1E5776]">           
+                <div class="p-8 rounded-3xl reveal bg-primary">           
                     <h3 class="text-white text-2xl font-bold mb-6">Ganho de Peso e Massa Muscular</h3>
                     <p class="text-white leading-relaxed text-lg">Estratégias para combater a perda de peso não intencional e a perda de massa muscular (sarcopenia)</p>
                 </div>
                 <!-- Card 2 -->
-                <div class="p-8 rounded-3xl reveal bg-[#EE873D]" style="transition-delay: 100ms">
+                <div class="p-8 rounded-3xl reveal bg-accent" style="transition-delay: 100ms">
                     <h3 class="text-white text-2xl font-bold mb-6">Equilíbrio de Doenças Crônicas</h3>
                     <p class="text-white leading-relaxed text-lg">Manejo nutricional para diabetes, hipertensão e colesterol, obesidade, entre outras</p>
                 </div>
                 <!-- Card 3 -->
-                <div class="p-8 rounded-3xl reveal bg-[#1E5776]" style="transition-delay: 200ms">
+                <div class="p-8 rounded-3xl reveal bg-primary" style="transition-delay: 200ms">
                     <h3 class="text-white text-2xl font-bold mb-6">Disposição e Vitalidade</h3>
                     <p class="text-white leading-relaxed text-lg">Resgate da energia para as atividades diárias por meio de nutrientes específicos e regulação metabólica</p>
                 </div>
                 <!-- Card 4 -->
-                <div class="p-8 rounded-3xl reveal bg-[#EE873D]" style="transition-delay: 300ms">
+                <div class="p-8 rounded-3xl reveal bg-accent" style="transition-delay: 300ms">
                     <h3 class="text-white text-2xl font-bold mb-6">Falta de Fome</h3>
                     <p class="text-white leading-relaxed text-lg">Estímulo do apetite e densidade nutricional para garantir que cada refeição supra as necessidades do seu corpo</p>
                 </div>
                 <!-- Card 5 -->
-                <div class="p-8 rounded-3xl reveal bg-[#1E5776]" style="transition-delay: 400ms">
+                <div class="p-8 rounded-3xl reveal bg-primary" style="transition-delay: 400ms">
                     <h3 class="text-white text-2xl font-bold mb-6">Mastigação e Deglutição</h3>
                     <p class="text-white leading-relaxed text-lg">Ajustes de texturas e consistências para garantir uma alimentação segura, prazerosa e livre de riscos</p>
                 </div>
                 <!-- Card 6 -->
-                <div class="p-8 rounded-3xl reveal bg-[#EE873D] " style="transition-delay: 500ms">
+                <div class="p-8 rounded-3xl reveal bg-accent" style="transition-delay: 500ms">
                     <h3 class="text-white text-2xl font-bold mb-6">Suplementação</h3>
                     <p class="text-white leading-relaxed text-lg">Prescrição assertiva de vitaminas e minerais baseada em exames para suprir carências comuns no envelhecimento</p>
                 </div>
@@ -260,7 +252,7 @@
     </section>
 
     <!-- Differentials Section -->
-    <section id="diferenciais" class="py-4 bg-white text-primary">
+    <section id="diferenciais" class="py-4 bg-white text-primary mt-10">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl md:text-5xl font-bold text-center mb-24 max-w-4xl mx-auto reveal">
                 Integração de saberes para um cuidado mais profundo e natural.
@@ -364,7 +356,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contato" class="py-24 bg-primary text-white overflow-hidden">
+    <section id="contato" class="py-24 bg-white text-accent overflow-hidden">
         <div class="container mx-auto px-4">
             <div class="flex flex-col lg:flex-row gap-20">
                 <div class="lg:w-1/2 reveal">
@@ -425,7 +417,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-20 bg-primary border-t border-white/10 text-white">
+    <footer class="py-2 bg-offwhite border-t border-white/10 text-accent">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center gap-12 text-center md:text-left">
                 <div>
@@ -435,10 +427,10 @@
                 
                 <div class="flex flex-col items-center md:items-end gap-6">
                     <div class="flex gap-4">
-                        <a href="#" class="p-4 bg-white/10 rounded-full hover:bg-accent transition" aria-label="Instagram">
+                        <a href="#" class="p-4 bg-white/10 rounded-full hover:bg-white transition" aria-label="Instagram">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                         </a>
-                        <a href="#" class="p-4 bg-white/10 rounded-full hover:bg-accent transition" aria-label="LinkedIn">
+                        <a href="#" class="p-4 bg-white/10 rounded-full hover:bg-white transition" aria-label="LinkedIn">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg>
                         </a>
                     </div>
