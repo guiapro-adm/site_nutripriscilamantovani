@@ -161,23 +161,28 @@
             transform: translateY(0);
         }
         /* #endregion */
-        
-        /* DEPOIMENTOS */
-        .testimonial-slider {
-            display: flex;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            scrollbar-width: none;
-            -ms-overflow-style: none;
-        }
-        .testimonial-slider::-webkit-scrollbar {
-            display: none;
-        }
-        .testimonial-card {
-            flex: 0 0 100%;
-            scroll-snap-align: start;
+               
+        /* #region DEPOIMENTOS */
+        @keyframes marquee-reverse {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
         }
 
+        .animate-marquee-reverse {
+            display: flex;
+            width: max-content;
+            animation: marquee-reverse 30s linear infinite;
+        }
+
+        /* Esconder barra de rolagem no carrossel mobile */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        /* #endregion */
     </style>
 </head>
 
@@ -524,23 +529,60 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="py-0 bg-white text-color1">
-        <div class="container mx-auto px-2">
- 
-            <h2 class="text-3xl md:text-4xl text-color2 font-black mb-2 ml-4 leading-tight">
+    <!-- #region SEÇÃO: DEPOIMENTOS -->
+    <section id="depoimentos" class="py-16 bg-white overflow-hidden">
+        <div class="container mx-auto px-4 mb-10">
+            <h2 class="text-3xl md:text-4xl text-color2 font-black mb-2 reveal">
                 Depoimentos
             </h2>
-
-            <p class="mb-4 ml-4 text-gray-500 italic">
+            <p class="text-gray-500 italic reveal" style="transition-delay: 100ms">
                 Experiências de quem já transformou sua rotina
             </p>
-            
-           
         </div>
 
+        <!-- DESKTOP: Letreiro Infinito (Esquerda para Direita) -->
+        <div class="hidden md:block relative">
+            <div class="animate-marquee-reverse hover:[animation-play-state:paused] cursor-pointer">
+                <!-- Conjunto 1 de 4 imagens -->
+                <div class="flex gap-6 px-3">
+                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-[2rem] shadow-md border border-gray-100" alt="Depoimento 1">
+                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-[2rem] shadow-md border border-gray-100" alt="Depoimento 2">
+                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-[2rem] shadow-md border border-gray-100" alt="Depoimento 3">
+                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-[2rem] shadow-md border border-gray-100" alt="Depoimento 4">
+                </div>
+                <!-- Conjunto 2 (Repetição para loop infinito) -->
+                <div class="flex gap-6 px-3">
+                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-[2rem] shadow-md border border-gray-100" alt="Depoimento 1">
+                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-[2rem] shadow-md border border-gray-100" alt="Depoimento 2">
+                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-[2rem] shadow-md border border-gray-100" alt="Depoimento 3">
+                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-[2rem] shadow-md border border-gray-100" alt="Depoimento 4">
+                </div>
+            </div>
+            
+            <!-- Gradientes laterais para suavizar a entrada/saída das imagens -->
+            <div class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white to-transparent z-10"></div>
+            <div class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-white to-transparent z-10"></div>
+        </div>
+
+        <!-- MOBILE: Carrossel com Scroll Snap -->
+        <div class="md:hidden flex overflow-x-auto snap-x snap-mandatory no-scrollbar gap-4 px-6 pb-4">
+            <div class="snap-center shrink-0 w-[85%]">
+                <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-full h-[450px] object-cover rounded-[2rem] shadow-lg" alt="Depoimento 1">
+            </div>
+            <div class="snap-center shrink-0 w-[85%]">
+                <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-full h-[450px] object-cover rounded-[2rem] shadow-lg" alt="Depoimento 2">
+            </div>
+            <div class="snap-center shrink-0 w-[85%]">
+                <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-full h-[450px] object-cover rounded-[2rem] shadow-lg" alt="Depoimento 3">
+            </div>
+            <div class="snap-center shrink-0 w-[85%]">
+                <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-full h-[450px] object-cover rounded-[2rem] shadow-lg" alt="Depoimento 4">
+            </div>
+        </div>
+        <p class="md:hidden text-center text-xs text-gray-400 mt-2">← Deslize para ver mais →</p>
     </section>
 
+<!-- #endregion -->
     <!-- #region SOBRE MIM -->
     <section id="sobre" class="py-20 bg-offwhite text-primary overflow-hidden">
         <div class="container mx-auto px-6">
