@@ -541,22 +541,47 @@
 
     </section>
 
-    <!-- Sobre Mim -->
-    <section class="py-16 bg-white text-color1">
-        <div class="container mx-auto px-2">
- 
-            <h2 class="text-3xl md:text-4xl text-color2 font-black mb-2 ml-4 leading-tight">
-                Sobre Mim
-            </h2>
+    <!-- #region SOBRE MIM -->
+    <section id="sobre" class="py-20 bg-offwhite text-primary overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-start gap-12 lg:gap-20">
+                
+                <!-- Coluna da Imagem -->
+                <div class="lg:w-1/3 reveal relative">
+                    <!-- Elemento decorativo atrás da foto -->
+                    <div class="absolute -top-4 -left-4 w-24 h-24 border-t-4 border-l-4 border-accent opacity-30"></div>
+                    <div class="absolute -bottom-4 -right-4 w-24 h-24 border-b-4 border-r-4 border-accent opacity-30"></div>
+                    
+                    <div class="relative z-10 overflow-hidden">
+                        <img src="https://i.postimg.cc/0294S82F/Foto-de-Priscila.jpg" 
+                            alt="Nutricionista Priscila Mantovani" 
+                            class="w-full h-auto object-cover">
+                    </div>
+                </div>
 
-            <p class="mb-4 ml-4 text-gray-500 italic">
-                Conheça um pouco da minha história
-            </p>
-                       
+                <!-- Coluna do Texto -->
+                <div class="lg:w-2/3 reveal">
+
+                    <span class="text-color2 font-bold tracking-widest uppercase text-sm mb-4 block">
+                        Sobre Mim
+                    </span>
+
+                    <h2 class="text-2xl font-black mb-8 leading-tight">
+                        Sou Priscila Mantovani... <br>
+                    </h2>
+                    
+                    <div class="space-y-8 font-light text-lg leading-relaxed">
+                        <p> Focada no público senior, meu propósito é ajudar você a envelhecer com saúde, energia e total autonomia. </p>
+                        <p> Acredito que a maturidade pode ser a fase mais vibrante da vida quando cuidamos do nosso corpo com o respeito que ele merece. </p>
+                        <p> Unindo a ciência da nutrição moderna ao saber milenar da Fitoterapia, ao equilíbrio da Aromaterapia e à harmonia dos Florais de Bach, ofereço um cuidado integral e personalizado para as suas necessidades específicas. </p>
+                    </div>
+                    
+                </div>
+
+            </div>
         </div>
-
     </section>
-
+    <!-- #endregion -->
 
     <!-- Contact Section -->
     <section id="contato" class="py-0 bg-white text-color2 overflow-hidden">
@@ -628,7 +653,7 @@
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center gap-12 text-center md:text-left">
                 <div>
-                    <div class="text-3xl font-bold mb-4">Priscila Mantovani</div>
+                    <div class="text-3xl font-mono mb-4 uppercase">Priscila Mantovani</div>
                     <p class="text-lg opacity-70">CRN3-94464</p>
                 </div>
                 
