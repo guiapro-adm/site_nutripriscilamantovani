@@ -54,46 +54,6 @@
         }
         /* #endregion */
 
-        /* #region SEÇÃO HERO */
-        /* Seção Hero */
-
-        .hero-bg {
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            background-color: #ffffff !important; 
-        }
-
-        /* Camada da Imagem - Desktop */
-        @media (min-width: 768px) {
-            .hero-bg::before {
-                content: '';
-                position: absolute;
-                inset: 0;
-                background-image: url('https://i.postimg.cc/s2d5pTPY/foto-pri-transparente.png');
-                background-repeat: no-repeat;
-                background-position: right 0px top 20px;
-                opacity: 75%; 
-                z-index: 1;
-            }
-        }
-
-        /* Ajuste para o Hero no Mobile não ficar preso em 100vh se o conteúdo for grande */
-        @media (max-width: 767px) {
-            .hero-bg {
-                min-height: auto !important;
-                padding-top: 5rem; /* Espaço para o header fixo */
-            }
-        }
-
-        /* Garante que o texto e botões fiquem acima do preto */
-        .hero-bg > * {
-            position: relative;
-            z-index: 2;
-        }
-        /* #endregion */
-
         /* #region TABELA DE PLANOS */
         /* Cabeçalho dos Grupos (Cinza) */
             .table-group-header {
@@ -231,39 +191,34 @@
     <!-- #endregion -->
 
     <!--  #region HERO DESTAQUE -->
-    <section id="inicio" class="hero-bg flex flex-col ">
-        <div class="w-full px-4 pt-8 md:pt-10 md:min-h-[50vh] flex flex-col justify-start items-start bg-color3 md:bg-white/0">
+    <section id="inicio" class="relative flex flex-col overflow-hidden pt-24 md:pt-10">
+        
+        <div class="relative w-full h-full md:h-[40vh] overflow-hidden">
+            <img src="https://i.postimg.cc/KjR8yZDc/foto-pri-consultorio.png" 
+                alt="Fundo Nutricionista" 
+                class="w-full h-full object-cover object-top opacity-30">
             
-            <!-- Logo -->
-            <img src="https://i.postimg.cc/mr6byP9S/logo-pri.png" 
-                alt="Logo Priscila Mantovani" 
-                class="hidden md:block w-16 md:w-80 mb-10">
+            <div class="absolute inset-0 bg-gradient-to-r from-color1/30 via-color3/10 via-75% to-transparent"></div>
+        </div>
 
-            <!-- Textos -->
-            <div class="max-w-4xl">                    
-                <h1 class="text-3xl md:text-4xl text-color2 font-black mb-2 leading-tight">
+        <div class="absolute z-10 w-full px-2 pt-20 md:pt-20 flex flex-col justify-start items-start">
+            <div class="max-w-4xl">  
+
+                <h1 class="hidden md:block text-4xl md:text-5xl text-color2 font-black mb-2 leading-tight">
                     Nutrição Senior
                 </h1>   
                 
-                <p class="text-lg md:text-xl mb-6">
-                   Para quem deseja envelhecer com saúde, energia e clareza mental.
+                
+                <p class="text-xl md:text-xl p-2 font-bold text-color2 bg-color3/50 rounded-full text-center">
+                    Para quem deseja envelhecer com saúde, energia e clareza mental.
                 </p>                  
             </div>
         </div>
-
-        <!-- Faixa com Imagem - Apenas Mobile -->
-        <div class="w-full md:hidden relative">
-            <!-- Imagem mantendo h-60 e forçando o foco no topo (rosto) -->
-            <img src="https://i.postimg.cc/KjR8yZDc/foto-pri-consultorio.png" 
-                alt="Nutricionista Priscila Mantovani" 
-                class="w-full h-56 object-cover object-top shadow-inner mb-0">
-        </div>
-    </section>
+    </section>    
     <!-- #endregion -->
 
     <!--  #region SERVIÇOS -->
     <section id="servicos" class="py-10 md:bg-color3">
-
         
         <h2 class="hidden md:block text-3xl text-color2 font-black mb-2 ml-4 leading-tight text-center md:text-left ">
             Tratamentos
