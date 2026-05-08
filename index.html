@@ -79,13 +79,13 @@
             position: absolute;
             bottom: 125%;
             left: 0;
-            width: 240px;
-            background: #2d3748; /* Cor escura do exemplo */
-            color: white;
+            width: 180px;
+            background: #D8FDD2; /* Cor escura do exemplo */
+            color: var(--cor-1);
             padding: 12px;
             border-radius: 8px;
             font-size: 12px;
-            font-weight: normal;
+            font-weight: bold;
             line-height: 1.4;
             z-index: 50;
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
@@ -99,7 +99,7 @@
             left: 10px;
             border-width: 6px;
             border-style: solid;
-            border-color: #2d3748 transparent transparent transparent;
+            border-color: #D8FDD2 transparent transparent transparent;
         }
 
         .tooltip-container:hover .tooltip-popup {
@@ -405,14 +405,14 @@
 
     <!-- O que está incluso (Planos) -->
     <section id="planos" class="py-16 bg-white">
-        <div class="container mx-auto px-2">
+        <div class="container mx-auto px-6">
             <h2 class="hidden md:block text-3xl md:text-4xl text-color2 font-black mb-2 ml-4 leading-tight">
                 Planos
             </h2>
 
             <p class="text-xl mb-4 md:ml-4 text-color1 font-black italic text-center">
                 Encontre o plano <br> ideal pra você
-          </p>
+            </p>
 
             <div class="overflow-x-auto pb-0">
                 <div class="bg-color3 rounded-3xl overflow-hidden border border-gray-100">
@@ -426,99 +426,241 @@
                         </thead>
                         <tbody class="text-color1">
                             
-                            <!-- GRUPO: ACOMPANHAMENTO NUTRICIONAL -->
-                            <tr><td colspan="4" class="table-group-header">Acompanhamento Nutricional</td></tr>
+                            <tr><td colspan="3" class="table-group-header">Acompanhamento Nutricional</td></tr>
                             
                             <tr class="border-b border-gray-200">
-                                <td class="p-5 text-sm font-bold">
-                                    Anamnese
-                                    <div class="tooltip-container">
+                                <td class="py-5 px-1 text-sm font-bold flex items-center gap-3">
+                                    <div class="tooltip-container shrink-0">
                                         <span class="text-gray-400 text-[10px] flex items-center justify-center border border-gray-300 rounded-full w-4 h-4">?</span>
                                         <div class="tooltip-popup">Entrevista detalhada para entender seu histórico de saúde, rotina, uso de medicamentos e necessidades específicas desta fase da vida.</div>
                                     </div>
+                                    Anamnese
                                 </td>
                                 <td class="status-cell" data-status="check"></td>
                                 <td class="status-cell" data-status="check"></td>
                             </tr>
 
                             <tr class="border-b border-gray-200 bg-gray-50/50">
-                                <td class="p-5 text-sm">Análise de exames laboratoriais</td>
-                                <td class="status-cell" data-status="check"></td>
-                                <td class="status-cell" data-status="check"></td>
-                                <td class="status-cell" data-status="check"></td>
-                            </tr>
-
-                            <tr class="border-b border-gray-200">
-                                <td class="p-5 text-sm">Anamnese completa</td>
-                                <td class="status-cell" data-status="check"></td>
-                                <td class="status-cell" data-status="check"></td>
-                                <td class="status-cell" data-status="check"></td>
-                            </tr>
-
-                            <tr class="border-b border-gray-200 bg-gray-50/50">
-                                <td class="p-5 text-sm">Avaliação do comportamento alimentar</td>
-                                <td class="status-cell" data-status="check"></td>
-                                <td class="status-cell" data-status="check"></td>
-                                <td class="status-cell" data-status="check"></td>
-                            </tr>
-                            
-                            <!-- GRUPO: PLANEJAMENTO E SUPLEMENTAÇÃO -->
-                            <tr><td colspan="4" class="table-group-header">Planejamento e Suplementação</td></tr>
-                            
-                            <tr class="border-b border-gray-200">
-                                <td class="p-5 text-sm font-bold">Plano alimentar personalizado</td>
-                                <td class="status-cell" data-status="check"></td>
-                                <td class="status-cell" data-status="check"></td>
-                                <td class="status-cell" data-status="check"></td>
-                            </tr>
-
-                            <tr class="border-b border-gray-200 bg-gray-50/50">
-                                <td class="p-5 text-sm font-bold">
-                                    Suplementação
-                                    <div class="tooltip-container">
+                                <td class="py-5 px-1 text-sm font-bold flex items-center gap-3">
+                                    <div class="tooltip-container shrink-0">
                                         <span class="text-gray-400 text-[10px] flex items-center justify-center border border-gray-300 rounded-full w-4 h-4">?</span>
-                                        <div class="tooltip-popup">Prescrição assertiva de vitaminas e minerais baseada em exames.</div>
+                                        <div class="tooltip-popup">Análise da sua relação com a comida, identificando hábitos, preferências e possíveis dificuldades que influenciam suas escolhas diárias.</div>
                                     </div>
+                                    Avaliação comportamental
                                 </td>
                                 <td class="status-cell" data-status="check"></td>
                                 <td class="status-cell" data-status="check"></td>
-                                <td class="status-cell" data-status="check"></td>
                             </tr>
 
-                            <!-- GRUPO: PRÁTICAS COMPLEMENTARES -->
-                            <tr><td colspan="4" class="table-group-header">Práticas Complementares</td></tr>
-                            
                             <tr class="border-b border-gray-200">
-                                <td class="p-5 text-sm">Fitoterapia</td>
-                                <td class="status-cell" data-status="x"></td>
+                                <td class="py-5 px-1 text-sm font-bold flex items-center gap-3">
+                                    <div class="tooltip-container shrink-0">
+                                        <span class="text-gray-400 text-[10px] flex items-center justify-center border border-gray-300 rounded-full w-4 h-4">?</span>
+                                        <div class="tooltip-popup">Leitura técnica e minuciosa dos seus exames de sangue para identificar deficiências nutricionais e ajustar o plano de saúde.</div>
+                                    </div>
+                                    Análise de exames laboratoriais
+                                </td>
                                 <td class="status-cell" data-status="check"></td>
                                 <td class="status-cell" data-status="check"></td>
                             </tr>
 
                             <tr class="border-b border-gray-200 bg-gray-50/50">
-                                <td class="p-5 text-sm">Florais de Bach</td>
-                                <td class="status-cell" data-status="x"></td>
-                                <td class="status-cell" data-status="x"></td>
+                                <td class="py-5 px-1 text-sm font-bold flex items-center gap-3">
+                                    <div class="tooltip-container shrink-0">
+                                        <span class="text-gray-400 text-[10px] flex items-center justify-center border border-gray-300 rounded-full w-4 h-4">?</span>
+                                        <div class="tooltip-popup">Documento orientativo emitido sempre que houver necessidade clínica, auxiliando na investigação de carências e no monitoramento preciso da sua saúde.</div>
+                                    </div>
+                                    Guia de solicitação de exames
+                                </td>
+                                <td class="status-cell" data-status="check"></td>
                                 <td class="status-cell" data-status="check"></td>
                             </tr>
 
-                            <!-- GRUPO: SUPORTE -->
-                            <tr><td colspan="4" class="table-group-header">Suporte</td></tr>
-                            
                             <tr class="border-b border-gray-200">
-                                <td class="p-5 text-sm font-bold">Plantão de dúvidas diário</td>
-                                <td class="status-cell" data-status="x"></td>
-                                <td class="status-cell" data-status="x"></td>
+                                <td class="py-5 px-1 text-sm font-bold flex items-center gap-3">
+                                    <div class="tooltip-container shrink-0">
+                                        <span class="text-gray-400 text-[10px] flex items-center justify-center border border-gray-300 rounded-full w-4 h-4">?</span>
+                                        <div class="tooltip-popup">Cardápio exclusivo e adaptado à sua rotina, respeitando seus gostos, cultura e necessidades nutricionais específicas.</div>
+                                    </div>
+                                    Plano alimentar individualizado
+                                </td>
+                                <td class="status-cell" data-status="check"></td>
                                 <td class="status-cell" data-status="check"></td>
                             </tr>
 
                             <tr class="border-b border-gray-200 bg-gray-50/50">
-                                <td class="p-5 text-sm">Ajuste semanal</td>
-                                <td class="status-cell font-bold text-center">1</td>
-                                <td class="status-cell font-bold text-center">3</td>
-                                <td class="status-cell font-bold text-center">6</td>
+                                <td class="py-5 px-1 text-sm font-bold flex items-center gap-3">
+                                    <div class="tooltip-container shrink-0">
+                                        <span class="text-gray-400 text-[10px] flex items-center justify-center border border-gray-300 rounded-full w-4 h-4">?</span>
+                                        <div class="tooltip-popup">Recomendação de vitaminas ou minerais de forma personalizada, apenas quando a alimentação sozinha não supre as necessidades do organismo.</div>
+                                    </div>
+                                    Suplementação
+                                </td>
+                                <td class="status-cell" data-status="check"></td>
+                                <td class="status-cell" data-status="check"></td>
                             </tr>
 
+                            <tr class="">
+                                <td class="py-5 px-1 text-sm font-bold flex items-center gap-3">
+                                    <div class="tooltip-container shrink-0">
+                                        <span class="text-gray-400 text-[10px] flex items-center justify-center border border-gray-300 rounded-full w-4 h-4">?</span>
+                                        <div class="tooltip-popup">Identificação de riscos de desnutrição e perda de força.</div>
+                                    </div>
+                                    Triagem nutricional
+                                </td>
+                                <td class="status-cell" data-status="check"></td>
+                                <td class="status-cell" data-status="check"></td>
+                            </tr>
+                            
+                            <tr><td colspan="3" class="table-group-header">Práticas Complementares</td></tr>
+                            
+                            <tr class="border-b border-gray-200 bg-gray-50/50">
+                                <td class="py-5 px-1 text-sm font-bold flex items-center gap-3">
+                                    <div class="tooltip-container shrink-0">
+                                        <span class="text-gray-400 text-[10px] flex items-center justify-center border border-gray-300 rounded-full w-4 h-4">?</span>
+                                        <div class="tooltip-popup">Utilização de óleos essenciais como suporte para promover equilíbrio emocional e físico, auxiliando em questões como sono, ansiedade ou disposição.</div>
+                                    </div>
+                                    Aromaterapia
+                                </td>
+                                <td class="status-cell" data-status="check"></td>
+                                <td class="status-cell" data-status="check"></td>
+                            </tr>
+
+                            <tr class="border-b border-gray-200">
+                                <td class="py-5 px-1 text-sm font-bold flex items-center gap-3">
+                                    <div class="tooltip-container shrink-0">
+                                        <span class="text-gray-400 text-[10px] flex items-center justify-center border border-gray-300 rounded-full w-4 h-4">?</span>
+                                        <div class="tooltip-popup">Terapia complementar focada no equilíbrio das emoções, ajudando a lidar com sentimentos e desafios do cotidiano de forma suave.</div>
+                                    </div>
+                                    Florais de Bach
+                                </td>
+                                <td class="status-cell" data-status="check"></td>
+                                <td class="status-cell" data-status="check"></td>
+                            </tr>
+
+                            <tr class="bg-gray-50/50">
+                                <td class="py-5 px-1 text-sm font-bold flex items-center gap-3">
+                                    <div class="tooltip-container shrink-0">
+                                        <span class="text-gray-400 text-[10px] flex items-center justify-center border border-gray-300 rounded-full w-4 h-4">?</span>
+                                        <div class="tooltip-popup">Uso terapêutico de plantas medicinais para auxiliar no equilíbrio do corpo, controle de sintomas e promoção do bem-estar natural quando necessáio.</div>
+                                    </div>
+                                    Fitoterapia
+                                </td>
+                                <td class="status-cell" data-status="check"></td>
+                                <td class="status-cell" data-status="check"></td>
+                            </tr>
+
+                            <tr><td colspan="3" class="table-group-header">Suporte e Continuidade</td></tr>
+                            
+                            <tr class="border-b border-gray-200">
+                                <td class="py-5 px-1 text-sm font-bold flex items-center gap-3">
+                                    <div class="tooltip-container shrink-0">
+                                        <span class="text-gray-400 text-[10px] flex items-center justify-center border border-gray-300 rounded-full w-4 h-4">?</span>
+                                        <div class="tooltip-popup">Período total de acompanhamento.</div>
+                                    </div>
+                                    Ciclo
+                                </td>
+                                <td class="status-cell text-center">90 dias</td>
+                                <td class="status-cell text-center">180 dias</td>
+                            </tr>
+
+                            <tr class="border-b border-gray-200 bg-gray-50/50">
+                                <td class="py-5 px-1 text-sm font-bold flex items-center gap-3">
+                                    <div class="tooltip-container shrink-0">
+                                        <span class="text-gray-400 text-[10px] flex items-center justify-center border border-gray-300 rounded-full w-4 h-4">?</span>
+                                        <div class="tooltip-popup">Quantidade de consultas.</div>
+                                    </div>
+                                    Consultas online
+                                </td>
+                                <td class="status-cell text-center">3</td>
+                                <td class="status-cell text-center">6</td>
+                            </tr>
+
+                            <tr class="border-b border-gray-200">
+                                <td class="py-5 px-1 text-sm font-bold flex items-center gap-3">
+                                    <div class="tooltip-container shrink-0">
+                                        <span class="text-gray-400 text-[10px] flex items-center justify-center border border-gray-300 rounded-full w-4 h-4">?</span>
+                                        <div class="tooltip-popup">Ajuste constante das metas e estratégias nutricionais de acordo com a sua evolução e resposta ao tratamento.</div>
+                                    </div>
+                                    Revisão da dieta
+                                </td>
+                                <td class="status-cell text-center">Mensal</td>
+                                <td class="status-cell text-center">Mensal</td>
+                            </tr>
+
+                            <tr class="bg-gray-50/50">
+                                <td class="py-5 px-1 text-sm font-bold flex items-center gap-3">
+                                    <div class="tooltip-container shrink-0">
+                                        <span class="text-gray-400 text-[10px] flex items-center justify-center border border-gray-300 rounded-full w-4 h-4">?</span>
+                                        <div class="tooltip-popup">Canal direto de comunicação para resolver questões sobre o plano alimentar ou suplementação entre as consultas..</div>
+                                    </div>
+                                    Suporte para dúvidas
+                                </td>
+                                <td class="status-cell text-center">Semanal</td>
+                                <td class="status-cell text-center">Diário</td>
+                            </tr>
+
+                            <tr><td colspan="3" class="table-group-header">Materiais de Apoio Especializados</td></tr>
+
+                            <tr class="border-b border-gray-200">
+                                <td class="py-5 px-1 text-sm font-bold flex items-center gap-3">
+                                    <div class="tooltip-container shrink-0">
+                                        <span class="text-gray-400 text-[10px] flex items-center justify-center border border-gray-300 rounded-full w-4 h-4">?</span>
+                                        <div class="tooltip-popup">Resumo com condutas e metas nutricionais para você apresentar ao seu médico, facilitando o alinhamento entre os profissionais e a segurança do seu tratamento.</div>
+                                    </div>
+                                    Cartão nutricional
+                                </td>
+                                <td class="status-cell" data-status="check"></td>
+                                <td class="status-cell" data-status="check"></td>
+                            </tr>
+
+                            <tr class="border-b border-gray-200 bg-gray-50/50">
+                                <td class="py-5 px-1 text-sm font-bold flex items-center gap-3">
+                                    <div class="tooltip-container shrink-0">
+                                        <span class="text-gray-400 text-[10px] flex items-center justify-center border border-gray-300 rounded-full w-4 h-4">?</span>
+                                        <div class="tooltip-popup">Guia prático com preparações saudáveis, saborosas e fáceis de fazer, focadas em densidade nutritiva e prazer à mesa.</div>
+                                    </div>
+                                    E-book de receitas culinárias
+                                </td>
+                                <td class="status-cell" data-status="check"></td>
+                                <td class="status-cell" data-status="check"></td>
+                            </tr>
+
+                            <tr class="border-b border-gray-200">
+                                <td class="py-5 px-1 text-sm font-bold flex items-center gap-3">
+                                    <div class="tooltip-container shrink-0">
+                                        <span class="text-gray-400 text-[10px] flex items-center justify-center border border-gray-300 rounded-full w-4 h-4">?</span>
+                                        <div class="tooltip-popup">Um guia organizado para otimizar suas idas ao mercado, garantindo a escolha dos melhores ingredientes sem desperdício.</div>
+                                    </div>
+                                    Lista de compras facilitada
+                                </td>
+                                <td class="status-cell" data-status="check"></td>
+                                <td class="status-cell" data-status="check"></td>
+                            </tr>
+
+                            <tr class="border-b border-gray-200 bg-gray-50/50">
+                                <td class="py-5 px-1 text-sm font-bold flex items-center gap-3">
+                                    <div class="tooltip-container shrink-0">
+                                        <span class="text-gray-400 text-[10px] flex items-center justify-center border border-gray-300 rounded-full w-4 h-4">?</span>
+                                        <div class="tooltip-popup">Dicas práticas para utilizar os alimentos de forma integral, evitando o desperdício e potencializando o valor nutricional das refeições.</div>
+                                    </div>
+                                    Manual de aproveitamento de alimentos
+                                </td>
+                                <td class="status-cell" data-status="check"></td>
+                                <td class="status-cell" data-status="check"></td>
+                            </tr>
+
+                            <tr class="">
+                                <td class="py-5 px-1 text-sm font-bold flex items-center gap-3">
+                                    <div class="tooltip-container shrink-0">
+                                        <span class="text-gray-400 text-[10px] flex items-center justify-center border border-gray-300 rounded-full w-4 h-4">?</span>
+                                        <div class="tooltip-popup">Documento orientador com diretrizes claras para que familiares ou profissionais de apoio possam replicar o cuidado nutricional com segurança.</div>
+                                    </div>
+                                    Manual de instruções para cuidadores
+                                </td>
+                                <td class="status-cell" data-status="check"></td>
+                                <td class="status-cell" data-status="check"></td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -753,7 +895,7 @@
         // #region SIMBOLOS CHECK E X NA TABELA DE PLANOS
         document.addEventListener("DOMContentLoaded", function() {
             const checkHTML = `
-                <div class="w-6 h-6 bg-[#45818E] rounded-full flex items-center justify-center mx-auto shadow-sm">
+                <div class="w-6 h-6 bg-[#00AC47] rounded-full flex items-center justify-center mx-auto shadow-sm">
                     <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path>
                     </svg>
