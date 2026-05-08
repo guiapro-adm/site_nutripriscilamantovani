@@ -48,10 +48,6 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Garantir que não haja caixa alta automática */
-        h1, h2, h3, h4, a, button, span {
-            text-transform: none !important;
-        }
         /* #endregion */
 
         /* #region TABELA DE PLANOS */
@@ -150,20 +146,20 @@
 
     <!--  #region HEADER MENU -->
     <!-- Header Desktop -->
-    <header class="hidden md:block fixed top-0 w-full z-50 bg-color2/90 h-10 shadow-lg">
+    <header class="hidden md:block fixed top-0 w-full z-50 bg-color3/90 h-10 shadow-lg">
         <div class="container mx-auto px-4 h-full flex items-center justify-center">
             <nav class="flex items-center gap-8">
-                <a href="#inicio" class="text-white hover:text-color1 transition font-medium">Início</a>
-                <a href="#servicos" class="text-white hover:text-color1 transition font-medium">Serviços</a>
-                <a href="#planos" class="text-white hover:text-color1 transition font-medium">Planos</a>
-                <a href="#diferenciais" class="text-white hover:text-color1 transition font-medium">Diferenciais</a>
-                <a href="#contato" class="text-white hover:text-color1 transition font-medium">Contato</a>
+                <a href="#inicio" class="text-color1 hover:text-color2 transition font-medium">Início</a>
+                <a href="#servicos" class="text-color1 hover:text-color2 transition font-medium">Serviços</a>
+                <a href="#planos" class="text-color1 hover:text-color2 transition font-medium">Planos</a>
+                <a href="#diferenciais" class="text-color1 hover:text-color2 transition font-medium">Diferenciais</a>
+                <a href="#contato" class="text-color1 hover:text-color2 transition font-medium">Contato</a>
             </nav>
         </div>
     </header>
 
     <!-- Header Mobile -->
-    <header class="md:hidden fixed top-0 w-full z-50 bg-white shadow-sm h-24 px-2 flex items-center justify-between">
+    <header class="md:hidden fixed top-0 w-full z-50 bg-color3/90 shadow-sm h-24 px-2 flex items-center justify-between">
         <!-- Logo no Header Mobile -->
         <img src="https://i.postimg.cc/kXv8J7MW/logo-pri-horizontal.png" alt="Logo" class="h-16 mt-1 ml-1"> 
         
@@ -218,22 +214,18 @@
     <!-- #endregion -->
 
     <!--  #region SERVIÇOS -->
-    <section id="servicos" class="py-10 bg-white">
+    <section id="servicos" class="py-10 bg-color3">
         
-        <h2 class="hidden md:block text-3xl text-color2 font-black mb-2 ml-4 leading-tight text-center md:text-left ">
-            Tratamentos
-        </h2>
-
-        <p class="hidden md:block text-xl mb-4 md:ml-4 text-gray italic text-center md:text-left">
+        <p class="hidden md:block text-xl mb-2 ml-6 text-color1 font-black italic text-left">
             Tratamentos personalizados conforme a sua necessidade
         </p>
 
-        <p class="md:hidden text-xl mb-4 md:ml-4 text-color1 font-black italic text-center md:text-left">
+        <p class="md:hidden text-xl mb-4 text-color1 font-black italic text-center">
             Tratamentos personalizados <br> conforme a sua necessidade
         </p>
         
-        <div class="w-full pl-6 md:pl-4 pr-6 md:pr-0">
-            <div class="grid grid-cols-1 md:grid-cols-5 gap-0 md:gap-4 lg:gap-4  text-center">
+        <div class="w-full px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-0 md:gap-2 lg:gap-2 text-center">
                 
                 <div class="p-4 rounded-t-3xl md:rounded-3xl bg-color1/10">
                     <h3 class="text-color1 text-sm font-black mb-2">AUTONOMIA E VITALIDADE</h3>
@@ -275,17 +267,18 @@
     <!-- #endregion -->
   
     <!--  #region DIFERENCIAIS -->
-    <section id="diferenciais" class="py-0 bg-white text-primary">
-        <div class="container mx-auto px-0">
-            <h2 class="hidden md:block text-3xl md:text-4xl text-color2 font-black mb-2 ml-4 leading-tight">
-                Metodologia
-            </h2>
+    <section id="diferenciais" class="py-0 bg-color3 text-primary">
+        <div class="mx-auto">
 
-            <p class="text-xl mb-4 md: ml-4 text-color2 font-black italic text-center">
+            <p class="hidden md:block text-xl mb-2 ml-6 text-color2 font-black italic text-left">
+                Meu jeito de nutrir
+            </p>
+
+            <p class="md:hidden text-xl mb-4 text-color2 font-black italic text-center">
                 Meu jeito <br> de nutrir
             </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 ">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 px-1 md:px-6">
                 
                 <!-- Card 1 -->
                 <div class="relative group overflow-hidden h-80 reveal border-2 border-white">
@@ -405,24 +398,25 @@
     <!-- #endregion -->
     
     <!--  #region PLANOS -->
-    <section id="planos" class="py-16 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="hidden md:block text-3xl md:text-4xl text-color2 font-black mb-2 ml-4 leading-tight">
-                Planos
-            </h2>
+    <section id="planos" class="py-10 bg-color3">
+        <div class="mx-auto">
 
-            <p class="text-xl mb-4 md:ml-4 text-color1 font-black italic text-center">
+            <p class="hidden md:block text-xl mb-2 ml-6 text-color1 font-black italic text-left">
+                Encontre o plano ideal pra você
+            </p>
+
+            <p class="md:hidden text-xl mb-4 text-color1 font-black italic text-center">
                 Encontre o plano <br> ideal pra você
             </p>
 
-            <div class="overflow-x-auto pb-0">
+            <div class="overflow-x-auto pb-0 px-6">
                 <div class="bg-color3 rounded-3xl overflow-hidden border border-gray-100">
                     <table class="w-full text-left border-collapse">
                         <thead>
-                            <tr class="bg-color1 text-white">
-                                <th class="p-6 text-lg font-bold w-1/3">Serviços Inclusos</th>
-                                <th class="text-center w-1/3 bg-color2">Essencial</th>
-                                <th class="text-center w-1/3 bg-color1">Personal</th>
+                            <tr class="bg-color1/30 text-white">
+                                <th class="p-4 text-sm  w-1/3">Serviços Inclusos</th>
+                                <th class="text-center text-sm w-1/3 bg-color2/30">Essencial</th>
+                                <th class="text-center text-sm w-1/3 bg-color1/40">Personal</th>
                             </tr>
                         </thead>
                         <tbody class="text-color1">
@@ -651,7 +645,7 @@
                                 <td class="status-cell" data-status="check"></td>
                             </tr>
 
-                            <tr class="">
+                            <tr class="border-b border-gray-200 ">
                                 <td class="py-5 px-1 text-sm font-bold flex items-center gap-3">
                                     <div class="tooltip-container shrink-0">
                                         <span class="text-gray-400 text-[10px] flex items-center justify-center border border-gray-300 rounded-full w-4 h-4">?</span>
@@ -666,44 +660,51 @@
                     </table>
                 </div>
             </div>
-            <p class="text-xs text-center text-gray-400 mt-4">Preços sob consulta</p>
+            <p class="text-xs text-center text-gray-400 mt-2">Preços sob consulta</p>
         </div>
     </section>
     <!-- #endregion -->
 
     <!-- #region DEPOIMENTOS -->
-    <section id="depoimentos" class="py-0 bg-white overflow-hidden">
-        <div class="container mx-auto px-4 mb-2">
-            <h2 class="hidden md:block text-3xl md:text-4xl text-color2 font-black mb-2 reveal">
-                Depoimentos
-            </h2>
-            <p class="text-xl mb-4 ml-4 text-color2 font-black italic text-center">
+    <section id="depoimentos" class="py-0 bg-color3 overflow-hidden">
+        <div class="mx-auto">
+            <p class="hidden md:block text-xl mb-4 ml-6 text-color2 font-black italic text-left">
+                A experiência de quem já transformou sua rotina
+            </p>
+
+            <p class="md:hidden text-xl mb-4 text-color2 font-black italic text-center">
                 A experiência de quem já <br> transformou sua rotina
             </p>
         </div>
 
         <!-- DESKTOP: Letreiro Infinito (Esquerda para Direita) -->
-        <div class="hidden md:block relative">
+        <div class="hidden md:block relative bg-color3 ">
             <div class="animate-marquee-reverse hover:[animation-play-state:paused] cursor-pointer">
                 <!-- Conjunto 1 de 4 imagens -->
-                <div class="flex gap-6 px-3">
-                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-[2rem] shadow-md border border-gray-100" alt="Depoimento 1">
-                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-[2rem] shadow-md border border-gray-100" alt="Depoimento 2">
-                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-[2rem] shadow-md border border-gray-100" alt="Depoimento 3">
-                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-[2rem] shadow-md border border-gray-100" alt="Depoimento 4">
+                <div class="flex gap-2 px-1">
+                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-2xl shadow-md border border-gray-100" alt="Depoimento 1">
+                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-2xl shadow-md border border-gray-100" alt="Depoimento 2">
+                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-2xl shadow-md border border-gray-100" alt="Depoimento 3">
+                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-2xl shadow-md border border-gray-100" alt="Depoimento 4">
+                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-2xl shadow-md border border-gray-100" alt="Depoimento 5">
+                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-2xl shadow-md border border-gray-100" alt="Depoimento 6">
+                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-2xl shadow-md border border-gray-100" alt="Depoimento 7">
+                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-2xl shadow-md border border-gray-100" alt="Depoimento 8">
                 </div>
                 <!-- Conjunto 2 (Repetição para loop infinito) -->
-                <div class="flex gap-6 px-3">
-                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-[2rem] shadow-md border border-gray-100" alt="Depoimento 1">
-                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-[2rem] shadow-md border border-gray-100" alt="Depoimento 2">
-                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-[2rem] shadow-md border border-gray-100" alt="Depoimento 3">
-                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-[2rem] shadow-md border border-gray-100" alt="Depoimento 4">
+                <div class="flex gap-2 px-1">
+                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-2xl shadow-md border border-gray-100" alt="Depoimento 1">
+                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-2xl shadow-md border border-gray-100" alt="Depoimento 2">
+                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-2xl shadow-md border border-gray-100" alt="Depoimento 3">
+                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-2xl shadow-md border border-gray-100" alt="Depoimento 4">
+                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-2xl shadow-md border border-gray-100" alt="Depoimento 5">
+                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-2xl shadow-md border border-gray-100" alt="Depoimento 6">
+                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-2xl shadow-md border border-gray-100" alt="Depoimento 7">
+                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-2xl shadow-md border border-gray-100" alt="Depoimento 8">
                 </div>
             </div>
             
-            <!-- Gradientes laterais para suavizar a entrada/saída das imagens -->
-            <div class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white to-transparent z-10"></div>
-            <div class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-white to-transparent z-10"></div>
+
         </div>
 
         <!-- MOBILE: Carrossel com Scroll Snap -->
@@ -721,54 +722,46 @@
                 <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-full h-[450px] object-cover rounded-[2rem] shadow-lg" alt="Depoimento 4">
             </div>
         </div>
-        <p class="md:hidden text-center text-xs text-gray-400 mt-2">← Deslize para ver mais →</p>
     </section>
 
 <!-- #endregion -->
  
     <!-- #region SOBRE MIM -->
-    <section id="sobre" class="py-10 bg-offwhite text-primary overflow-hidden">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col lg:flex-row items-start gap-12 lg:gap-20">
-                
-                <!-- Coluna da Imagem -->
-                <div class="lg:w-1/3 reveal relative">
-                    <!-- Elemento decorativo atrás da foto -->
-                    <div class="absolute -top-4 -left-4 w-24 h-24 border-t-4 border-l-4 border-accent opacity-30"></div>
-                    <div class="absolute -bottom-4 -right-4 w-24 h-24 border-b-4 border-r-4 border-accent opacity-30"></div>
-                    
-                    <div class="relative z-10 overflow-hidden">
-                        <img src="https://i.postimg.cc/WzRk7d3H/Gemini-Generated-Image-s9u1vhs9u1vhs9u1.png" 
-                            alt="Nutricionista Priscila Mantovani" 
-                            class="w-full h-auto object-cover">
-                    </div>
+    <section id="sobre" class="py-10 bg-color3">
+
+        <p class="hidden md:block text-xl mb-2 ml-6 text-color1 font-black italic text-left">
+            Um pouco sobre mim
+        </p>
+
+        <p class="md:hidden text-xl mb-4 text-color1 font-black italic text-center">
+            Um pouco <br> sobre mim
+        </p>
+
+        <div class="mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 ">
+                                       
+                <p class="text-xl mb-4 text-color2 font-medium text-left">
+                    Sou Priscila Mantovani... 
+                </p>
+
+                <div class="mt-2 space-y-8 font-light text-lg leading-relaxed">
+                    <p> Focada no público senior, meu propósito é ajudar você a envelhecer com saúde, energia e total autonomia. </p>
+                    <p> Acredito que a maturidade pode ser a fase mais vibrante da vida quando cuidamos do nosso corpo com o respeito que ele merece. </p>
+                    <p> Unindo a ciência da nutrição moderna ao saber milenar da Fitoterapia, ao equilíbrio da Aromaterapia e à harmonia dos Florais de Bach, ofereço um cuidado integral e personalizado para as suas necessidades específicas. </p>
                 </div>
 
-                <!-- Coluna do Texto -->
-                <div class="lg:w-2/3 reveal">
-
-                    <span class="text-color2 font-bold tracking-widest uppercase text-sm mb-4 block">
-                        Sobre Mim
-                    </span>
-
-                    <h2 class="text-2xl font-black mb-8 leading-tight">
-                        Sou Priscila Mantovani... <br>
-                    </h2>
-                    
-                    <div class="space-y-8 font-light text-lg leading-relaxed">
-                        <p> Focada no público senior, meu propósito é ajudar você a envelhecer com saúde, energia e total autonomia. </p>
-                        <p> Acredito que a maturidade pode ser a fase mais vibrante da vida quando cuidamos do nosso corpo com o respeito que ele merece. </p>
-                        <p> Unindo a ciência da nutrição moderna ao saber milenar da Fitoterapia, ao equilíbrio da Aromaterapia e à harmonia dos Florais de Bach, ofereço um cuidado integral e personalizado para as suas necessidades específicas. </p>
-                    </div>
-                    
+                               
+                <div class="relative z-10 overflow-hidden mt-6 rounded-2xl">
+                    <img src="https://i.postimg.cc/WzRk7d3H/Gemini-Generated-Image-s9u1vhs9u1vhs9u1.png" 
+                        alt="Nutricionista Priscila Mantovani" 
+                        class="w-full h-auto object-cover">
                 </div>
 
-            </div>
+
         </div>
     </section>
     <!-- #endregion -->
 
-    <!-- Contact Section -->
+    <!-- #region CONTATO -->
     <section id="contato" class="py-6 bg-color3 text-color2 overflow-hidden">
         <div class="container mx-auto px-4">
                 <h2 class="text-3xl md:text-4xl text-color2 font-black mb-2 ml-4 leading-tight">
@@ -841,6 +834,7 @@
 
         </div>
     </section>
+    <!-- #endregion -->
 
     <!-- #region FOOTER -->
     <footer class="py-2 bg-color3 border-t border-white/10 text-color1">
