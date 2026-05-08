@@ -413,10 +413,10 @@
                 <div class="bg-color3 rounded-3xl overflow-hidden border border-gray-100">
                     <table class="w-full text-left border-collapse">
                         <thead>
-                            <tr class="bg-color1/30 text-white">
-                                <th class="p-4 text-sm  w-1/3">Serviços Inclusos</th>
-                                <th class="text-center text-sm w-1/3 bg-color2/30">Essencial</th>
-                                <th class="text-center text-sm w-1/3 bg-color1/40">Personal</th>
+                            <tr class="text-white">
+                                <th class="p-4 text-sm  w-1/3 bg-color1/50">Serviços Inclusos</th>
+                                <th class="text-center text-sm w-1/3 bg-color2/70">Essencial</th>
+                                <th class="text-center text-sm w-1/3 bg-color1/70">Personal</th>
                             </tr>
                         </thead>
                         <tbody class="text-color1">
@@ -537,7 +537,7 @@
                                 <td class="py-5 px-1 text-sm font-bold flex items-center gap-3">
                                     <div class="tooltip-container shrink-0">
                                         <span class="text-gray-400 text-[10px] flex items-center justify-center border border-gray-300 rounded-full w-4 h-4">?</span>
-                                        <div class="tooltip-popup">Uso terapêutico de plantas medicinais para auxiliar no equilíbrio do corpo, controle de sintomas e promoção do bem-estar natural quando necessáio.</div>
+                                        <div class="tooltip-popup">Uso terapêutico de plantas medicinais para auxiliar no equilíbrio do corpo, controle de sintomas e promoção do bem-estar natural quando necessário.</div>
                                     </div>
                                     Fitoterapia
                                 </td>
@@ -591,7 +591,7 @@
                                     </div>
                                     Suporte para dúvidas
                                 </td>
-                                <td class="status-cell text-center">Semanal</td>
+                                <td class="status-cell text-center">Diário</td>
                                 <td class="status-cell text-center">Diário</td>
                             </tr>
 
@@ -727,37 +727,38 @@
 <!-- #endregion -->
  
     <!-- #region SOBRE MIM -->
-    <section id="sobre" class="py-10 bg-color3">
+    <section id="sobre" class="py-10 bg-color3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-6">
 
-        <p class="hidden md:block text-xl mb-2 ml-6 text-color1 font-black italic text-left">
-            Um pouco sobre mim
-        </p>
+        <header class="md:col-start-1 md:col-span-1">
+            <p class="hidden md:block text-xl mb-2 ml-6 text-color1 font-black italic text-left">
+                Um pouco sobre mim
+            </p>
 
-        <p class="md:hidden text-xl mb-4 text-color1 font-black italic text-center">
-            Um pouco <br> sobre mim
-        </p>
+            <p class="md:hidden text-xl mb-4 text-color1 font-black italic text-center">
+                Um pouco <br> sobre mim
+            </p>
+        </header>
 
-        <div class="mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 ">
-                                       
-                <p class="text-xl mb-4 text-color2 font-medium text-left">
-                    Sou Priscila Mantovani... 
-                </p>
+        <div class="px-6 md:pl-12 md:col-start-1 md:col-span-1">
+            <p class="text-xl mb-4 text-color2 font-medium text-left">
+                Sou Priscila Mantovani... 
+            </p>
 
-                <div class="mt-2 space-y-8 font-light text-lg leading-relaxed">
-                    <p> Focada no público senior, meu propósito é ajudar você a envelhecer com saúde, energia e total autonomia. </p>
-                    <p> Acredito que a maturidade pode ser a fase mais vibrante da vida quando cuidamos do nosso corpo com o respeito que ele merece. </p>
-                    <p> Unindo a ciência da nutrição moderna ao saber milenar da Fitoterapia, ao equilíbrio da Aromaterapia e à harmonia dos Florais de Bach, ofereço um cuidado integral e personalizado para as suas necessidades específicas. </p>
-                </div>
-
-                               
-                <div class="relative z-10 overflow-hidden mt-6 rounded-2xl">
-                    <img src="https://i.postimg.cc/WzRk7d3H/Gemini-Generated-Image-s9u1vhs9u1vhs9u1.png" 
-                        alt="Nutricionista Priscila Mantovani" 
-                        class="w-full h-auto object-cover">
-                </div>
-
-
+            <div class="mt-2 space-y-8 font-light text-lg leading-relaxed ">
+                <p>Focada no público senior, meu propósito é ajudar você a envelhecer com saúde, energia e total autonomia.</p>
+                <p>Acredito que a maturidade pode ser a fase mais vibrante da vida quando cuidamos do nosso corpo com o respeito que ele merece.</p>
+                <p>Unindo a ciência da nutrição moderna ao saber milenar da Fitoterapia, ao equilíbrio da Aromaterapia e à harmonia dos Florais de Bach, ofereço um cuidado integral e personalizado para as suas necessidades específicas.</p>
+            </div>
         </div>
+
+        <div class="px-6 md:pr-12 md:col-start-2 md:col-span-1 lg:col-span-2">
+            <div class="overflow-hidden rounded-2xl shadow-xl">
+                <img src="https://i.postimg.cc/WzRk7d3H/Gemini-Generated-Image-s9u1vhs9u1vhs9u1.png" 
+                    alt="Nutricionista Priscila Mantovani" 
+                    class="w-full h-full object-cover">
+            </div>
+        </div>
+
     </section>
     <!-- #endregion -->
 
