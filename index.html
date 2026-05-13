@@ -151,7 +151,7 @@
 
         <!-- Botões Navegação Desktop -->
         <!-- Alterado de md:block para md:flex e ajustado o gap para um valor equilibrado -->
-        <nav class="hidden md:flex items-center md:gap-4 lg:gap-8 pr-4">
+        <nav class="hidden lg:flex items-center md:gap-2 lg:gap-8 pr-4">
             <a href="#inicio" class="text-color1 hover:text-color2 transition font-black whitespace-nowrap">Início</a>
             <a href="#tratamentos" class="text-color1 hover:text-color2 transition font-black whitespace-nowrap">Tratamentos</a>
             <a href="#diferenciais" class="text-color1 hover:text-color2 transition font-black whitespace-nowrap">Diferenciais</a>
@@ -162,14 +162,14 @@
         </nav>
         
         <!-- Botão Hambúrguer Mobile-->
-        <button id="mobile-menu-button" class="md:hidden text-color1 focus:outline-none">
+        <button id="mobile-menu-button" class="lg:hidden text-color1 focus:outline-none">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
         </button>
     </header>
     <!-- Menu Mobile Overlay (Escondido por padrão) -->
-    <div id="mobile-menu" class="fixed inset-0 bg-color1 z-[60] transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col items-center justify-center space-y-8 text-white text-2xl font-bold">
+    <div id="mobile-menu" class="fixed inset-0 bg-color1 z-[60] transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col items-center justify-center space-y-8 text-white text-2xl font-bold">
         <button id="close-menu" class="absolute top-6 right-6 text-white">
             <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
