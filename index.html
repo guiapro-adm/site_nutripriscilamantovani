@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Priscila Mantovani | Nutrição 60+ e Idosos</title>
+    <title>Priscila Mantovani | Nutrição Sênior</title>
     
     <!-- #region GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,6 +22,7 @@
                         color2: '#B46647',
                         color3: '#fdf8fa',
                         color4: '#f6f3f5',
+                        color5: '#927744',
                     },
                     fontFamily: {
                         sans: ['"Lato",', 'sans-serif'],
@@ -39,6 +40,7 @@
             --cor-2: #B46647;
             --cor-3: #fdf8fa;
             --cor-4: #f6f3f5;
+            --cor-5: #927744;
         }
 
         body {
@@ -118,27 +120,6 @@
         }
         /* #endregion */
                
-        /* #region DEPOIMENTOS */
-        @keyframes marquee-reverse {
-            0% { transform: translateX(-50%); }
-            100% { transform: translateX(0); }
-        }
-
-        .animate-marquee-reverse {
-            display: flex;
-            width: max-content;
-            animation: marquee-reverse 30s linear infinite;
-        }
-
-        /* Esconder barra de rolagem no carrossel mobile */
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-        /* #endregion */
     </style>
 </head>
 
@@ -156,7 +137,6 @@
             <a href="#tratamentos" class="text-color1 hover:text-color2 transition font-black whitespace-nowrap">Tratamentos</a>
             <a href="#diferenciais" class="text-color1 hover:text-color2 transition font-black whitespace-nowrap">Diferenciais</a>
             <a href="#planos" class="text-color1 hover:text-color2 transition font-black whitespace-nowrap">Planos</a>
-            <a href="#depoimentos" class="text-color1 hover:text-color2 transition font-black whitespace-nowrap">Depoimentos</a>
             <a href="#sobre" class="text-color1 hover:text-color2 transition font-black whitespace-nowrap">Sobre Mim</a>
             <a href="#contato" class="text-color1 hover:text-color2 transition font-black whitespace-nowrap">Contato</a>
         </nav>
@@ -169,7 +149,7 @@
         </button>
     </header>
     <!-- Menu Mobile Overlay (Escondido por padrão) -->
-    <div id="mobile-menu" class="fixed inset-0 bg-color1 z-[60] transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col items-center justify-center space-y-8 text-white text-2xl font-bold">
+    <div id="mobile-menu" class="fixed inset-0 bg-color1 z-[60] transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col items-center justify-center space-y-6 text-white text-2xl font-bold">
         <button id="close-menu" class="absolute top-6 right-6 text-white">
             <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -179,7 +159,6 @@
         <a href="#tratamentos" class="mobile-link">Tratamentos</a>
         <a href="#diferenciais" class="mobile-link">Diferenciais</a>
         <a href="#planos" class="mobile-link">Planos</a>
-        <a href="#depoimentos" class="mobile-link">Depoimentos</a>
         <a href="#sobre" class="mobile-link">Sobre Mim</a>
         <a href="#contato" class="mobile-link">Contato</a>
     </div>
@@ -200,10 +179,10 @@
             <div class="absolute inset-0 bg-gradient-to-r from-color1/90 via-color1/40 to-transparent"></div>
         </div>
 
-        <div class="absolute z-10 w-full px-2 pt-10 md:pt-20 flex flex-col justify-start items-start">
+        <div class="absolute inset-0 z-10 w-full px-2 pt-10 md:pt-20 flex flex-col justify-center items-start">
             <div class="max-w-4xl">  
                
-                <p class="text-xl md:text-2xl lg:text-4xl p-4 font-bold text-white rounded-full text-center">
+                <p class="text-xl md:text-2xl lg:text-4xl p-4 font-bold text-white text-center">
                     Para quem <br> deseja envelhecer <br> com saúde, energia <br> e clareza mental.
                 </p>   
 
@@ -215,11 +194,11 @@
     <!--  #region TRATAMENTOS -->
     <section id="tratamentos" class="scroll-mt-24 py-10 bg-color3">
         
-        <p class="hidden md:block text-xl mb-2 ml-6 text-color1 font-black italic text-left">
+        <p class="hidden md:block text-xl mb-2 ml-6 text-color5 font-black italic text-left">
             Tratamentos personalizados conforme a sua necessidade
         </p>
 
-        <p class="md:hidden text-xl mb-4 text-color1 font-black italic text-center">
+        <p class="md:hidden text-xl mb-4 text-color5 font-black italic text-center">
             Tratamentos personalizados <br> conforme a sua necessidade
         </p>
         
@@ -269,11 +248,11 @@
     <section id="diferenciais" class="scroll-mt-32 py-0 bg-color3 text-primary">
         <div class="mx-auto">
 
-            <p class="hidden md:block text-xl mb-2 ml-6 text-color2 font-black italic text-left">
+            <p class="hidden md:block text-xl mb-2 ml-6 text-color5 font-black italic text-left">
                 Meu jeito de nutrir
             </p>
 
-            <p class="md:hidden text-xl mb-4 text-color2 font-black italic text-center">
+            <p class="md:hidden text-xl mb-4 text-color5 font-black italic text-center">
                 Meu jeito <br> de nutrir
             </p>
 
@@ -400,11 +379,11 @@
     <section id="planos" class="scroll-mt-24 py-10 bg-color3">
         <div class="mx-auto">
 
-            <p class="hidden md:block text-xl mb-2 ml-6 text-color1 font-black italic text-left">
+            <p class="hidden md:block text-xl mb-2 ml-6 text-color5 font-black italic text-left">
                 Encontre o plano ideal pra você
             </p>
 
-            <p class="md:hidden text-xl mb-4 text-color1 font-black italic text-center">
+            <p class="md:hidden text-xl mb-4 text-color5 font-black italic text-center">
                 Encontre o plano <br> ideal pra você
             </p>
 
@@ -664,76 +643,15 @@
     </section>
     <!-- #endregion -->
 
-    <!-- #region DEPOIMENTOS -->
-    <section id="depoimentos" class="scroll-mt-32 py-0 bg-color3 overflow-hidden">
-        <div class="mx-auto">
-            <p class="hidden md:block text-xl mb-4 ml-6 text-color2 font-black italic text-left">
-                Relatos de alguns pacientes
-            </p>
-
-            <p class="md:hidden text-xl mb-4 text-color2 font-black italic text-center">
-                Relatos <br> de alguns pacientes
-            </p>
-        </div>
-
-        <!-- DESKTOP: Letreiro Infinito (Esquerda para Direita) -->
-        <div class="hidden md:block relative bg-color3 ">
-            <div class="animate-marquee-reverse hover:[animation-play-state:paused] cursor-pointer">
-                <!-- Conjunto 1 de 4 imagens -->
-                <div class="flex gap-2 px-1">
-                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-2xl shadow-md border border-gray-100" alt="Depoimento 1">
-                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-2xl shadow-md border border-gray-100" alt="Depoimento 2">
-                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-2xl shadow-md border border-gray-100" alt="Depoimento 3">
-                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-2xl shadow-md border border-gray-100" alt="Depoimento 4">
-                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-2xl shadow-md border border-gray-100" alt="Depoimento 5">
-                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-2xl shadow-md border border-gray-100" alt="Depoimento 6">
-                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-2xl shadow-md border border-gray-100" alt="Depoimento 7">
-                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-2xl shadow-md border border-gray-100" alt="Depoimento 8">
-                </div>
-                <!-- Conjunto 2 (Repetição para loop infinito) -->
-                <div class="flex gap-2 px-1">
-                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-2xl shadow-md border border-gray-100" alt="Depoimento 1">
-                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-2xl shadow-md border border-gray-100" alt="Depoimento 2">
-                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-2xl shadow-md border border-gray-100" alt="Depoimento 3">
-                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-2xl shadow-md border border-gray-100" alt="Depoimento 4">
-                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-2xl shadow-md border border-gray-100" alt="Depoimento 5">
-                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-2xl shadow-md border border-gray-100" alt="Depoimento 6">
-                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-2xl shadow-md border border-gray-100" alt="Depoimento 7">
-                    <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-80 h-[500px] object-cover rounded-2xl shadow-md border border-gray-100" alt="Depoimento 8">
-                </div>
-            </div>
-            
-
-        </div>
-
-        <!-- MOBILE: Carrossel com Scroll Snap -->
-        <div class="md:hidden flex overflow-x-auto snap-x snap-mandatory no-scrollbar gap-4 px-6 pb-4">
-            <div class="snap-center shrink-0 w-[85%]">
-                <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-full h-[450px] object-cover rounded-[2rem] shadow-lg" alt="Depoimento 1">
-            </div>
-            <div class="snap-center shrink-0 w-[85%]">
-                <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-full h-[450px] object-cover rounded-[2rem] shadow-lg" alt="Depoimento 2">
-            </div>
-            <div class="snap-center shrink-0 w-[85%]">
-                <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-full h-[450px] object-cover rounded-[2rem] shadow-lg" alt="Depoimento 3">
-            </div>
-            <div class="snap-center shrink-0 w-[85%]">
-                <img src="https://i.postimg.cc/jdSfDvzN/Screenshot-20260504-183001-Whats-App.jpg" class="w-full h-[450px] object-cover rounded-[2rem] shadow-lg" alt="Depoimento 4">
-            </div>
-        </div>
-    </section>
-
-<!-- #endregion -->
- 
     <!-- #region SOBRE MIM -->
-    <section id="sobre" class="scroll-mt-20 md:scroll-mt-26 lg:scroll-mt-26 py-10 bg-color3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-6">
+    <section id="sobre" class="scroll-mt-20 md:scroll-mt-26 lg:scroll-mt-26 pb-10 bg-color3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-6">
 
         <header class="md:col-start-1 md:col-span-2 lg:col-start-1 lg:col-span-2">
-            <p class="hidden md:block text-xl mb-2 ml-6 text-color1 font-black italic text-left">
+            <p class="hidden md:block text-xl mb-2 ml-6 text-color5 font-black italic text-left">
                 Um pouco sobre mim
             </p>
 
-            <p class="md:hidden text-xl mb-4 text-color1 font-black italic text-center">
+            <p class="md:hidden text-xl mb-4 text-color5 font-black italic text-center">
                 Um pouco <br> sobre mim
             </p>
         </header>
@@ -761,48 +679,44 @@
         <div class="hidden lg:block lg:ml-0 mt-0 lg:mt-0 md:col-start-1 md:col-span-2 lg:col-start-4 lg:col-span-1">
 
             <!-- 1. DESKTOP: Escondido por padrão, aparece apenas no LG (1024px+) -->
-            <p class="hidden lg:block text-xl text-color2 font-black italic text-left">
-                Vamos conversar? <br> Entre em contato agora mesmo.
-            </p>
-
-            <!-- 2. TABLET: Escondido no mobile, aparece no MD, esconde novamente no LG -->
-            <p class="hidden md:block lg:hidden text-xl text-color2 font-black italic text-left">
-                Vamos conversar? Entre em contato agora mesmo.
-            </p>
-
-            <!-- 3. MOBILE: Visível por padrão, esconde no MD (que engloba Tablet e Desktop) -->
-            <p class="block md:hidden text-xl text-color2 font-black italic text-center">
+            <p class="hidden lg:block text-xl text-color5 font-black italic text-left">
                 Vamos conversar? <br> Entre em contato agora mesmo.
             </p>
 
             <div class="space-y-6 mt-6 mb-4 md:col-start-1 md:col-span-1 lg:col-start-4 lg:col-span-1">
-                <div class="flex items-start gap-2">
-                    <div class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center flex-shrink-0">
+                
+                <!-- WhatsApp -->
+                <a href="https://wa.me/5511984837616" target="_blank" rel="noopener noreferrer" class="flex items-start gap-2 group transition-all">
+                    <div class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-color2/50 transition-colors">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
                     </div>
                     <div>
-                        <p class="text-sm font-semibold opacity-60">WhatsApp</p>
-                        <p class="text-lg">(11) 98483-7616</p>
+                        <p class="text-sm font-semibold opacity-60 group-hover:text-color2 transition-opacity">WhatsApp</p>
+                        <p class="text-lg group-hover:text-color2 transition-colors">(11) 98483-7616</p>
                     </div>
-                </div>
-                <div class="flex items-start gap-2">
-                    <div class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center flex-shrink-0">
+                </a>
+
+                <!-- E-mail -->
+                <a href="mailto:nutripriscilamantovani@gmail.com" class="flex items-start gap-2 group transition-all">
+                    <div class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-color2/50 transition-colors">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 00-2 2z"/></svg>
                     </div>
                     <div>
-                        <p class="text-sm font-semibold opacity-60">E-mail</p>
-                        <p class="text-lg">nutripriscilamantovani@gmail.com</p>
+                        <p class="text-sm font-semibold opacity-60 group-hover:text-color2 transition-opacity">E-mail</p>
+                        <p class="text-lg group-hover:text-color2 transition-colors">nutripriscilamantovani@gmail.com</p>
                     </div>
-                </div>
-                <div class="flex items-start gap-2">
-                    <div class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center flex-shrink-0">
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/nutripriscilamantovani/" target="_blank" rel="noopener noreferrer" class="flex items-start gap-2 group transition-all">
+                    <div class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-color2/50 transition-colors">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                     </div>
                     <div>
-                        <p class="text-sm font-semibold opacity-60">Instagram</p>
-                        <p class="text-lg">@nutripriscilamantovani</p>
+                        <p class="text-sm font-semibold opacity-60 group-hover:text-color2 transition-opacity">Instagram</p>
+                        <p class="text-lg group-hover:text-color2 transition-colors">@nutripriscilamantovani</p>
                     </div>
-                </div>
+                </a>
 
             </div>
 
@@ -816,49 +730,50 @@
     
     <div class="block lg:hidden ml-6 lg:ml-0 mt-0 lg:mt-0 md:col-start-1 md:col-span-2 lg:col-start-4 lg:col-span-1">
 
-        <!-- 1. DESKTOP: Escondido por padrão, aparece apenas no LG (1024px+) -->
-        <p class="hidden lg:block text-xl text-color2 font-black italic text-left">
-            Vamos conversar? <br> Entre em contato agora mesmo.
-        </p>
-
         <!-- 2. TABLET: Escondido no mobile, aparece no MD, esconde novamente no LG -->
-        <p class="hidden md:block lg:hidden text-xl text-color2 font-black italic text-left">
+        <p class="hidden md:block lg:hidden text-xl text-color5 font-black italic text-left">
             Vamos conversar? Entre em contato agora mesmo.
         </p>
 
         <!-- 3. MOBILE: Visível por padrão, esconde no MD (que engloba Tablet e Desktop) -->
-        <p class="block md:hidden text-xl text-color2 font-black italic text-center">
+        <p class="block md:hidden text-xl text-color5 font-black italic text-center">
             Vamos conversar? <br> Entre em contato agora mesmo.
         </p>
 
         <div class="space-y-6 mt-6 mb-4 md:col-start-1 md:col-span-1 lg:col-start-4 lg:col-span-1">
-            <div class="flex items-start gap-2">
-                <div class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center flex-shrink-0">
+            
+            <!-- WhatsApp -->
+            <a href="https://wa.me/5511984837616" target="_blank" rel="noopener noreferrer" class="flex items-start gap-2 group transition-all">
+                <div class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-color2/50 transition-colors">
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
                 </div>
                 <div>
-                    <p class="text-sm font-semibold opacity-60">WhatsApp</p>
-                    <p class="text-lg">(11) 98483-7616</p>
+                    <p class="text-sm font-semibold opacity-60 group-hover:text-color2 transition-opacity">WhatsApp</p>
+                    <p class="text-lg group-hover:text-color2 transition-colors">(11) 98483-7616</p>
                 </div>
-            </div>
-            <div class="flex items-start gap-2">
-                <div class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center flex-shrink-0">
+            </a>
+
+            <!-- E-mail -->
+            <a href="mailto:nutripriscilamantovani@gmail.com" class="flex items-start gap-2 group transition-all">
+                <div class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-color2/50 transition-colors">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 00-2 2z"/></svg>
                 </div>
                 <div>
-                    <p class="text-sm font-semibold opacity-60">E-mail</p>
-                    <p class="text-lg">nutripriscilamantovani@gmail.com</p>
+                    <p class="text-sm font-semibold opacity-60 group-hover:text-color2 transition-opacity">E-mail</p>
+                    <p class="text-lg group-hover:text-color2 transition-colors">nutripriscilamantovani@gmail.com</p>
                 </div>
-            </div>
-            <div class="flex items-start gap-2">
-                <div class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center flex-shrink-0">
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/nutripriscilamantovani/" target="_blank" rel="noopener noreferrer" class="flex items-start gap-2 group transition-all">
+                <div class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-color2/50 transition-colors">
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                 </div>
                 <div>
-                    <p class="text-sm font-semibold opacity-60">Instagram</p>
-                    <p class="text-lg">@nutripriscilamantovani</p>
+                    <p class="text-sm font-semibold opacity-60 group-hover:text-color2 transition-opacity">Instagram</p>
+                    <p class="text-lg group-hover:text-color2 transition-colors">@nutripriscilamantovani</p>
                 </div>
-            </div>
+            </a>
 
         </div>
 
@@ -947,45 +862,6 @@
         window.addEventListener('scroll', checkReveal);
         window.addEventListener('load', checkReveal);
         // #endregion
-
-        // Lógica do Carrossel de Depoimentos
-        const slider = document.getElementById('testimonial-slider');
-        const dots = document.querySelectorAll('.slider-dot');
-
-        function updateDots(index) {
-            dots.forEach((dot, i) => {
-                if (i === index) {
-                    dot.classList.replace('bg-color1/20', 'bg-color2');
-                    dot.classList.replace('w-4', 'w-12');
-                } else {
-                    dot.classList.replace('bg-color2', 'bg-color1/20');
-                    dot.classList.replace('w-12', 'w-4');
-                }
-            });
-        }
-
-        slider.addEventListener('scroll', () => {
-            const scrollIndex = Math.round(slider.scrollLeft / slider.offsetWidth);
-            updateDots(scrollIndex);
-        });
-
-        dots.forEach(dot => {
-            dot.addEventListener('click', () => {
-                const index = parseInt(dot.getAttribute('data-index'));
-                slider.scrollTo({
-                    left: index * slider.offsetWidth,
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Formulário de Contato Simulado
-        const contactForm = document.getElementById('contact-form');
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Mensagem enviada com sucesso! Priscila entrará em contato em breve.');
-            contactForm.reset();
-        });
 
     </script>
 
